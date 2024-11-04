@@ -1,0 +1,29 @@
+baseURL: https://tabor-consulting.co.uk
+languageCode: en-gb
+title: Hattie Tabor
+theme: colordrop
+
+params:
+  siteLogo: logo.png
+  themeColor: "#709385"
+  themeInverseColor: "#ffffff"
+  description: |
+
+  author:
+    name: Hattie Tabor
+
+menu:
+  # main:
+  #   - identifier: Contact
+  #     name: Contact
+  #     url: contact/
+  #     weight: 3
+  footer:
+    - identifier: linkedin
+      name: linkedin
+      url: "https://www.linkedin.com/in/harriet-tabor-7b2051330"
+      weight: 1
+    - identifier: email
+      name: email
+      url: "mailto:info@tabor-consulting.co.uk"
+      weight: 2

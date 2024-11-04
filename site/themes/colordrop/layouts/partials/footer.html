@@ -1,0 +1,9 @@
+<footer>
+  <div class="container">
+    <div class="footer-navigation">
+      {{ range .Site.Menus.footer }}
+      <a target="_blank" href="{{ .URL | absLangURL }}"> {{ partial "svg" .Name }} </a>
+      {{ end }}
+    </div>
+  </div>
+</footer>
