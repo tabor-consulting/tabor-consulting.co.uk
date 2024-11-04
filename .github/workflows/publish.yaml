@@ -1,0 +1,45 @@
+name: Fly Deploy
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  packages: write
+
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install nix
+        uses: DeterminateSystems/nix-installer-action@v14
+
+      - name: Setup magic-nix-cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build container
+        run: |
+          nix build -L .#tabor-consulting-container
+
+      - name: Upload container to ghcr.io
+        run: |
+          docker load < result
+          docker tag "jnsgruk/tabor-consulting.co.uk:$(git rev-parse --short HEAD)" "ghcr.io/jnsgruk/tabor-consulting.co.uk:$(git rev-parse --short HEAD)"
+          docker push "ghcr.io/jnsgruk/tabor-consulting.co.uk:$(git rev-parse --short HEAD)"
+
+      - name: Deploy site
+        run: |
+          nix run nixpkgs#flyctl -- deploy -i "ghcr.io/jnsgruk/tabor-consulting.co.uk:$(git rev-parse --short HEAD)"
+        env:
+          FLY_ACCESS_TOKEN: ${{ secrets.FLY_API_TOKEN }}

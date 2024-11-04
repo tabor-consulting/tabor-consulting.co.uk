@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "meta" . }}
+
+    {{ block "jsonLD" . }}
+    {{ end }}
+
+    <!-- Page title -->
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+
+    <!-- styles -->
+    {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | css.Sass| resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ relURL $style.Permalink }}">
+    {{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | relURL }}">
+    {{- end }}
+
+    {{ block "headAdditional" . }}
+    {{ end }}
+  </head>
+
+  <body class="{{ block "bodyClass" . }}{{ end }}">
+    {{ block "body" . }}
+      <div class="wrapper">
+        {{ partial "header" . }}
+        {{ partial "navigation" . }}
+
+        <main>
+          <div class="container">
+            {{ block "main" . }}
+            {{ end }}
+          </div>
+        </main>
+
+        {{ partial "footer" . }}
+      </div>
+    {{ end }}
+
+    {{ block "footerJS" . }}
+    {{ end }}
+
+    <script>
+      loadSearch({{ with .Site.GetPage "/" }}{{ with .OutputFormats.Get "json" }}'{{ .Permalink }}'{{ end }}{{ end }});
+    </script>
+  </body>
+</html>
