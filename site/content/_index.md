@@ -14,9 +14,9 @@ I am driven by a desire to inspire students, and to foster deep understanding. I
 passionate about developing and implementing innovative curricula and assessments which promote
 critical thinking and problem-solving skills.
 
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Mz--m1xqZIo?si=wF42_HrtdRsbzoa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="margin-top: 20px" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</center>
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Mz--m1xqZIo?si=wF42_HrtdRsbzoa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 # Portfolio
 
