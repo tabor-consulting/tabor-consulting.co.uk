@@ -4,8 +4,8 @@ html {
 
 body {
   font-family: $font-family-sans-serif;
-  font-size: 14.4px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   color: darken($theme-color, 15%);
 }
@@ -18,7 +18,14 @@ b, strong {
   font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
+  color: #DA8359 !important;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 24px 0 16px;
+}
+
+h1{
   color: $theme-color;
   line-height: 1.2;
   font-weight: 700;

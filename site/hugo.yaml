@@ -3,21 +3,26 @@ languageCode: en-gb
 title: Hattie Tabor
 theme: colordrop
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   siteLogo: logo.png
-  themeColor: "#709385"
-  themeInverseColor: "#ffffff"
+  themeColor: "#A5B68D"
+  themeInverseColor: "#FCFAEE"
   description: |
 
   author:
     name: Hattie Tabor
 
 menu:
-  # main:
-  #   - identifier: Contact
-  #     name: Contact
-  #     url: contact/
-  #     weight: 3
+  main:
+    - identifier: Bookings
+      name: Bookings
+      url: https://tabor-consulting.co.uk/booking
+      weight: 2
   footer:
     - identifier: linkedin
       name: linkedin

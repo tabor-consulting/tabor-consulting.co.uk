@@ -14,6 +14,10 @@ I am driven by a desire to inspire students, and to foster deep understanding. I
 passionate about developing and implementing innovative curricula and assessments which promote
 critical thinking and problem-solving skills.
 
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mz--m1xqZIo?si=wF42_HrtdRsbzoa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="margin-top: 20px" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
 # Portfolio
 
 #### Educational Consulting - Ghana
@@ -35,4 +39,6 @@ During this engagement I performed the review and quality assurance process for:
 
 # Contact
 
-hello@tabor-consulting.co.uk
+For general enquiries, please contact us by email at hello@tabor-consulting.co.uk.
+
+For tutoring bookings, please use our <a href="https://tabor-consulting.co.uk/booking" target="_blank">booking form</a>.
