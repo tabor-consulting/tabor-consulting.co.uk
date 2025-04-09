@@ -1,41 +1,35 @@
 ---
-title: About
-linkTitle: About
+title: Tutoring
+linkTitle: Tutoring
 weight: 1
 menu:
   main: {}
 draft: false
 ---
 
-A dedicated physics tutor and educational consultant backed by over a decade of experience in some
-of the leading independent schools in the UK.
+I'm a dedicated tutor and educational consultant backed by over a decade of experience in some of the leading independent schools in the UK. I strive to inspire students and to equip them with the tools that they need to achieve their potential academically.
 
-I am driven by a desire to inspire students, and to foster deep understanding. I am
-passionate about developing and implementing innovative curricula and assessments which promote
-critical thinking and problem-solving skills.
+I am available for tutoring services, specialising in the following subjects:
+
+- A-level Physics
+- GCSE Maths
+- GCSE Science
 
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/PlkBXsVSC2w?si=xkyJuGSXt0wqn0OV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-# Portfolio
+# Teaching Experience
 
-#### Educational Consulting - Ghana
-
-Physics and General Sciences Reviewer for the Senior High School curriculum overhaul in Ghana.
-
-During this engagement I performed the review and quality assurance process for:
-
-- Teacher Manuals; documents designed to aide teachers in Ghana in implementing appropriate pedagogy, inclusive lesson plans and in incorporating 21st century skills.
-- Learning Materials; documents designed for the learner; firstly to summarise the specification content clearly and secondly to provide a series of activities to perform and problems to solve to deepen and broaden their understanding.
-- Subject specification, assessment structure and sample assessment materials.
-
-#### Tutoring
+- **2019-2025**: Physics & Astronomy Teacher | Redmaids High School, Bristol
+- **2015-2019**: Physics & Maths Teacher | Clifton College, Bristol
+- **2013-2015**: Science Teacher | Finham Park School, Coventry
 
 # Qualifications
 
-- **2013**: University of Warwick | PGCE in Science – Physics Specialism
+- **2025**: Cambridge Press | A101 Introducing the Principles of Assessment
 - **2014**: University of Warwick | BSc Physics
+- **2013**: University of Warwick | PGCE in Science – Physics Specialism
 
 # Contact
 

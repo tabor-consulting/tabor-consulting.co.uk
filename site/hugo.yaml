@@ -22,7 +22,9 @@ menu:
     - identifier: Bookings
       name: Bookings
       url: https://tabor-consulting.co.uk/booking
-      weight: 2
+      weight: 3
+      params:
+        rel: external
   footer:
     - identifier: linkedin
       name: linkedin
