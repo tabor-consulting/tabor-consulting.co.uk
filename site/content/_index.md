@@ -7,9 +7,9 @@ menu:
 draft: false
 ---
 
-I'm a dedicated tutor and educational consultant backed by over a decade of experience in some of the leading independent schools in the UK. I strive to inspire students and to equip them with the tools that they need to achieve their potential academically.
+I'm a dedicated tutor and educational consultant based in Thornbury (Bristol, UK). I'm backed by over a decade of experience in some of the leading independent schools in the UK. I strive to inspire students and to equip them with the tools that they need to achieve their potential academically.
 
-I am available for tutoring services, specialising in the following subjects:
+I am available for tutoring services online or in-person, specialising in the following subjects:
 
 - A-level Physics
 - GCSE Maths
@@ -35,4 +35,4 @@ I am available for tutoring services, specialising in the following subjects:
 
 For general enquiries, please contact us by email at hello@tabor-consulting.co.uk.
 
-For tutoring bookings, please use our <a href="https://tabor-consulting.co.uk/booking" target="_blank">booking form</a>.
+For tutoring bookings, either online or in-person, please use our <a href="https://tabor-consulting.co.uk/booking" target="_blank">booking form</a>.
