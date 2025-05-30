@@ -30,8 +30,8 @@ My pricing ranges from £40-£60 per hour depending on level  (GCSE/A-level) and
 # Qualifications
 
 - **2025**: Cambridge Press | A101 Introducing the Principles of Assessment
-- **2014**: University of Warwick | BSc Physics
-- **2013**: University of Warwick | PGCE in Science – Physics Specialism
+- **2014**: University of Warwick | PGCE in Science – Physics Specialism
+- **2013**: University of Warwick | BSc Physics
 
 # Contact
 
