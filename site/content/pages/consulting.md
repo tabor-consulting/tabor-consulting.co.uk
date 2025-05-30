@@ -7,7 +7,7 @@ menu:
 draft: false
 ---
 
-I am available for freelance education consultancy roles, please contact me at hello@tabor-consulting.co.uk for more information.
+I am available for freelance education consultancy roles, please contact me at hattie@tabor-consulting.co.uk for more information.
 
 ### Educational Consulting - Ghana
 

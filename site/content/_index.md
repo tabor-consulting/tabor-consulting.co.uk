@@ -15,6 +15,8 @@ I am available for tutoring services online or in-person, specialising in the fo
 - GCSE Maths
 - GCSE Science
 
+My pricing ranges from £40-£60 per hour depending on level  (GCSE/A-level) and time of day.
+
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/PlkBXsVSC2w?si=xkyJuGSXt0wqn0OV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -33,6 +35,4 @@ I am available for tutoring services online or in-person, specialising in the fo
 
 # Contact
 
-For general enquiries, please contact us by email at hello@tabor-consulting.co.uk.
-
-For tutoring bookings, either online or in-person, please use our <a href="https://tabor-consulting.co.uk/booking" target="_blank">booking form</a>.
+Please contact hattie@tabor-consulting.co.uk with enquiries, or use the <a href="https://tabor-consulting.co.uk/booking" target="_blank">booking form</a> to book a free 15 minute chat with me to see if I'm the right tutor for you!
