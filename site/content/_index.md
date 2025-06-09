@@ -17,9 +17,9 @@ I am available for tutoring services online or in-person, specialising in the fo
 
 My pricing ranges from £40-£60 per hour depending on level  (GCSE/A-level) and time of day.
 
-<div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/PlkBXsVSC2w?si=xkyJuGSXt0wqn0OV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<video height="400" poster="placeholder.png" controls>
+    <source src="/intro.mp4" type="video/mp4">
+</video>
 
 # Teaching Experience
 
