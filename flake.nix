@@ -98,9 +98,7 @@
               gopls
               hugo
               flyctl
-              zsh
             ];
-            shellHook = "exec zsh";
           };
         }
       );
