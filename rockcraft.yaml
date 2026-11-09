@@ -1,0 +1,36 @@
+name: tabor-consulting
+base: bare
+build-base: ubuntu@26.04
+adopt-info: tabor-consulting
+run-user: _daemon_
+summary: Tabor Consulting website
+description: Website for Tabor Consulting
+
+platforms:
+  amd64:
+
+services:
+  tabor-consulting:
+    override: replace
+    command: /usr/bin/tabor-consulting
+    startup: enabled
+
+parts:
+  tabor-consulting:
+    plugin: go
+    source: .
+    build-snaps:
+      - go/1.27/stable
+    build-packages:
+      - git
+      - curl
+    override-build: |
+      bash .workshop/hugo/scripts/install-hugo
+      bash .workshop/hugo/scripts/install-dart-sass
+      COMMIT=$(git rev-parse --short HEAD)
+      go generate ./...
+      go build -o ${CRAFT_PART_INSTALL}/usr/bin/tabor-consulting -ldflags "-X main.commit=${COMMIT}" .
+      craftctl set version="${COMMIT}"
+    stage-packages:
+      - libc6_libs
+      - ca-certificates_data
