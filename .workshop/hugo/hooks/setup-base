@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
+# setup-base runs before the project is mounted. Bundle installers with the SDK.
+bash "${SDK:?}/scripts/install-hugo"
+bash "${SDK:?}/scripts/install-dart-sass"

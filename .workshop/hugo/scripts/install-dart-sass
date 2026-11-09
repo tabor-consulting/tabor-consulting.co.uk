@@ -1,0 +1,28 @@
+#!/bin/bash
+set -euo pipefail
+
+# Keep development and Rockcraft builds on the same compiler while Colordrop
+# still uses legacy Sass imports. Review this pin when updating the theme.
+version=1.108.1
+prefix=${DART_SASS_PREFIX:-/usr/local}
+case "$(dpkg --print-architecture)" in
+  amd64)
+    architecture=x64
+    checksum=8c699c6e808ef44425b74e3f800e44b7cbec5d6d8bec022aba034294c4bfe4c0
+    ;;
+  arm64)
+    architecture=arm64
+    checksum=bc7696af4579c7286b00b7ba49363c90d98aebdfd4881d7a37fd2669c92b2efb
+    ;;
+  *) echo "Unsupported Dart Sass architecture" >&2; exit 1 ;;
+esac
+
+download_dir=$(mktemp -d)
+trap 'rm -rf "$download_dir"' EXIT
+archive="$download_dir/dart-sass.tar.gz"
+curl -fsSL "https://github.com/sass/dart-sass/releases/download/${version}/dart-sass-${version}-linux-${architecture}.tar.gz" -o "$archive"
+echo "${checksum}  ${archive}" | sha256sum --check
+install -d "$prefix/lib" "$prefix/bin"
+tar -xzf "$archive" -C "$prefix/lib"
+ln -sf "$prefix/lib/dart-sass/sass" "$prefix/bin/sass"
+"$prefix/bin/sass" --version

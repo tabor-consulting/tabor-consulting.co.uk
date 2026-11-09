@@ -3,4 +3,6 @@ resources/
 site/resources/
 site/public
 .hugo_build.lock
-result*
+*.rock
+/tabor-consulting
+.workshop.lock
