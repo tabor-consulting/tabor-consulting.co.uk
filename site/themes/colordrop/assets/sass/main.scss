@@ -2,6 +2,7 @@
 @import "fonts";
 @import "normalize";
 @import "reset";
+@import "code";
 
 // variable overrides
 $theme-color: {{ default "#000000" .Site.Params.themeColor }};
@@ -14,8 +15,11 @@ $theme-inverse-color: {{ default "#ffffff" .Site.Params.themeInverseColor }};
 @import "language";
 @import "header";
 @import "navigation";
+@import "search";
 @import "publish";
 @import "footer";
 @import "svg";
 @import "license";
+@import "taxonomy";
 @import "pagination";
+@import "curriculum";

@@ -1,0 +1,69 @@
+p > code, li > code {
+  background: #f1f1f1;
+  padding: 2px;
+  border: 1px solid #d5d5d5;
+}
+
+.highlight > pre, .highlight > div {
+  padding: 2px 0 3px;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.highlight > pre {
+  padding-left: 8px;
+}
+
+code > span > span {
+  padding-right: 8px;
+}
+
+.highlight {
+  margin-bottom: 20px;
+
+  table td {
+    pre {
+      margin: 0;
+
+      code > span {
+        display: flex;
+      }
+    }
+  }
+}
+
+.clipboard-button {
+  position: absolute;
+  right: 0;
+  margin: 5px;
+  font-size: 0.8em;
+  z-index: 1;
+
+  opacity: 0.3;
+  transition: 0.1s;
+}
+
+.clipboard-button svg {
+  fill: #c1c1c1;
+}
+
+.clipboard-button:hover {
+  cursor: pointer;
+}
+
+.clipboard-button:hover svg {
+  fill: #ffffff;
+}
+
+.clipboard-button:focus {
+  outline: 0;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight:hover .clipboard-button {
+  opacity: 1;
+  transition: 0.2s;
+}

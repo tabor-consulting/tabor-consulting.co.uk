@@ -1,0 +1,17 @@
+---
+type:
+title:
+name:
+jobTitle:
+locationName:
+locationLink:
+profile:
+contact:
+employment:
+education:
+community:
+languages:
+techSkills:
+softSkills:
+openSource:
+---

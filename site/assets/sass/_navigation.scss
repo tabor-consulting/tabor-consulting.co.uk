@@ -1,0 +1,17 @@
+@use "sass:color";
+
+.main-navigation {
+  text-align: center;
+  padding: 8px 0;
+
+  a {
+    color: #DA8359 !important;
+    display: inline-block;
+    padding: 8px 16px;
+    border-bottom: 1px solid color.adjust(#DA8359, $lightness: 70%);
+
+    &:hover, &:focus, &:active, &.active {
+      border-bottom: 1px solid #DA8359;
+    }
+  }
+}

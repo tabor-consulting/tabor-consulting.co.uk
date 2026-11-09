@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "meta" . }}
+
+    {{ block "jsonLD" . }}
+    {{ end }}
+
+    <!-- Page title -->
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+    <!-- styles -->
+    {{/* Colordrop uses legacy imports and color functions. Keep its dependency
+         notices quiet until upstream migrates; Dart Sass is pinned in
+         .workshop/hugo/scripts/install-dart-sass. Project Sass uses modern color functions. */}}
+    {{ $sassOptions := dict "transpiler" "dartsass" "silenceDependencyDeprecations" true "silenceDeprecations" (slice "import") }}
+    {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | css.Sass $sassOptions | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{- end }}
+
+    {{ block "headAdditional" . }}
+    {{ end }}
+  </head>
+
+  <body class="{{ block "bodyClass" . }}{{ end }}">
+    {{ block "body" . }}
+      <div class="wrapper">
+        {{ partial "language" . }}
+        {{ partial "header" . }}
+        {{ partial "navigation" . }}
+
+        <main>
+          <div class="container">
+            {{ block "main" . }}
+            {{ end }}
+          </div>
+        </main>
+
+        {{ partial "footer" . }}
+      </div>
+    {{ end }}
+
+    {{ partial "addthis" . }}
+
+    {{ block "footerJS" . }}
+    {{ end }}
+
+    {{ if (findRE "<pre" .Content 1) }}
+      <script src="/copy/copy.js"></script>
+    {{ end }}
+
+  </body>
+</html>

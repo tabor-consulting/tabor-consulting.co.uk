@@ -1,5 +1,5 @@
 baseURL: https://tabor-consulting.co.uk
-languageCode: en-gb
+locale: en-GB
 title: Hattie Tabor
 theme: colordrop
 
@@ -9,6 +9,8 @@ markup:
       unsafe: true
 
 params:
+  custom_css:
+    - overrides.css
   siteLogo: logo.png
   themeColor: "#A5B68D"
   themeInverseColor: "#FCFAEE"

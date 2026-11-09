@@ -20,11 +20,10 @@ main {
   padding-bottom: 20px;
 
   p a, li a {
-    color: #DA8359;
-    border-bottom: 1px solid lighten(#DA8359, 60%);
+    border-bottom: 1px solid lighten($theme-color, 60%);
 
     &:hover, &:focus, &:active {
-      border-bottom: 1px solid #DA8359;
+      border-bottom: 1px solid $theme-color;
     }
   }
 
