@@ -16,8 +16,8 @@ jobs:
         uses: actions/checkout@v7
 
       # Initialize LXD's default profile before Workshop creates its own resources.
-      - name: Build rock
-        uses: canonical/craft-actions/rockcraft/pack@67781aa5b0245eafdc6495760649c54c86059dfa
+      - name: Set up Rockcraft and LXD
+        uses: canonical/craft-actions/rockcraft/setup@67781aa5b0245eafdc6495760649c54c86059dfa
         with:
           lxd-channel: 6/stable
 
@@ -31,3 +31,8 @@ jobs:
           workshop run -- build
           workshop exec -- go vet ./...
           workshop exec -- go test ./...
+
+      - name: Build rock
+        uses: canonical/craft-actions/rockcraft/pack@67781aa5b0245eafdc6495760649c54c86059dfa
+        with:
+          lxd-channel: 6/stable
