@@ -3,16 +3,16 @@ set -euo pipefail
 
 prefix=${HUGO_PREFIX:-/usr/local}
 
-# Use the upstream binary so Workshop and Rockcraft can access project files
-# and use the same separately installed Dart Sass compiler.
+# Use the upstream binary so Workshop can access project files
+# and use the separately installed Dart Sass compiler.
 case "$(dpkg --print-architecture)" in
   amd64) architecture=amd64 ;;
   arm64) architecture=arm64 ;;
   *) echo "Unsupported Hugo architecture" >&2; exit 1 ;;
 esac
 
-release_url=$(curl -fsSL -o /dev/null -w '%{url_effective}' https://github.com/gohugoio/hugo/releases/latest)
-version=${release_url##*/v}
+# Shared by local development and CI, matching the reference site's Hugo pin.
+version=0.170.0
 archive="hugo_extended_${version}_linux-${architecture}.tar.gz"
 checksums="hugo_${version}_checksums.txt"
 download_dir=$(mktemp -d)
@@ -25,5 +25,6 @@ sha256sum --check --ignore-missing "$checksums"
 tar -xzf "$archive" hugo
 install -d "$prefix/bin"
 install -m 0755 hugo "$prefix/bin/hugo"
-"$prefix/bin/hugo" version | grep -F '+extended'
+# Smoke-test without relying on version-output formatting; the build tests Sass.
+"$prefix/bin/hugo" version
 
