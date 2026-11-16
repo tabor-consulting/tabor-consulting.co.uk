@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# Keep development and Rockcraft builds on the same compiler while Colordrop
+# Pin the Workshop compiler while Colordrop
 # still uses legacy Sass imports. Review this pin when updating the theme.
 version=1.108.1
 prefix=${DART_SASS_PREFIX:-/usr/local}

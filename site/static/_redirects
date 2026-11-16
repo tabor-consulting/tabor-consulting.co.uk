@@ -1,0 +1,28 @@
+# Tabor Consulting shortlinks, migrated from the Gist formerly loaded by gosherve.
+/routes https://gist.github.com/jnsgruk/fa235aa47016cc4f9943878e5278c3a8 301
+/routes/ https://gist.github.com/jnsgruk/fa235aa47016cc4f9943878e5278c3a8 301
+/linkedin https://www.linkedin.com/in/harriet-tabor-7b2051330 301
+/linkedin/ https://www.linkedin.com/in/harriet-tabor-7b2051330 301
+/booking https://outlook.office365.com/owa/calendar/Tutoring1@Taborconsultingltd.onmicrosoft.com/bookings/ 301
+/booking/ https://outlook.office365.com/owa/calendar/Tutoring1@Taborconsultingltd.onmicrosoft.com/bookings/ 301
+/bookings https://outlook.office365.com/owa/calendar/Tutoring1@Taborconsultingltd.onmicrosoft.com/bookings/ 301
+/bookings/ https://outlook.office365.com/owa/calendar/Tutoring1@Taborconsultingltd.onmicrosoft.com/bookings/ 301
+
+# Preserve file URLs with an extra trailing slash.
+/*.css/ /:splat.css 301
+/*.html/ /:splat.html 301
+/*.ico/ /:splat.ico 301
+/*.jpeg/ /:splat.jpeg 301
+/*.jpg/ /:splat.jpg 301
+/*.js/ /:splat.js 301
+/*.json/ /:splat.json 301
+/*.md/ /:splat.md 301
+/*.mp4/ /:splat.mp4 301
+/*.png/ /:splat.png 301
+/*.svg/ /:splat.svg 301
+/*.txt/ /:splat.txt 301
+/*.webmanifest/ /:splat.webmanifest 301
+/*.webp/ /:splat.webp 301
+/*.woff/ /:splat.woff 301
+/*.woff2/ /:splat.woff2 301
+/*.xml/ /:splat.xml 301
