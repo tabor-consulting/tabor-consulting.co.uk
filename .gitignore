@@ -3,6 +3,7 @@ resources/
 site/resources/
 site/public
 .hugo_build.lock
-*.rock
-/tabor-consulting
 .workshop.lock
+node_modules/
+build/
+.wrangler/

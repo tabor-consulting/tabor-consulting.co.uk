@@ -1,4 +1,4 @@
-name: Build
+name: Pull Request
 on:
   pull_request:
     branches:
@@ -7,32 +7,20 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: pull-request-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
-  build:
-    name: Build rock
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      # Initialize LXD's default profile before Workshop creates its own resources.
-      - name: Set up Rockcraft and LXD
-        uses: canonical/craft-actions/rockcraft/setup@81f87ca0ab0e922d49f2e7a87c4605c08e2e6832
+      - uses: actions/checkout@v7
         with:
-          lxd-channel: 6/stable
-
+          fetch-depth: 0
       - name: Launch Workshop
         uses: canonical/launch-workshop@b9e184e38f49808ced78e25de19483fe02484c46 # v1
         with:
-          cache: go:mod-cache
-
-      - name: Validate site and Go application
-        run: |
-          workshop run -- build
-          workshop exec -- go vet ./...
-          workshop exec -- go test ./...
-
-      - name: Build rock
-        uses: canonical/craft-actions/rockcraft/pack@81f87ca0ab0e922d49f2e7a87c4605c08e2e6832
-        with:
-          lxd-channel: 6/stable
+          cache: node:npm-cache
+      - name: Build and validate deployment
+        run: workshop run -- check
